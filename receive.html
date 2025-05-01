@@ -1,0 +1,25 @@
+<!-- receive.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>استلام</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="centered gradient">
+  <div class="form-container">
+    <h2>استلام من مستخدم</h2>
+    <form id="receiveForm">
+      <select id="receiveCoin">
+        <option>TRX</option><option>USDT</option><option>USDD</option>
+        <option>BTC</option><option>ETH</option><option>BTT</option><option>NFT</option>
+      </select>
+      <input id="fromWallet" placeholder="عنوان مرسل" required>
+      <input id="receiveAmount" type="number" placeholder="المبلغ" required>
+      <button type="submit" class="circle-btn">استلام</button>
+    </form>
+    <p id="receiveMsg" class="success-message"></p>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
