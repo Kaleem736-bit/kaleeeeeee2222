@@ -1,0 +1,30 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة الأدمن</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="centered gradient">
+  <div class="form-container">
+    <h2>لوحة المالك</h2>
+    <input id="adminCode" placeholder="ادخل رمز الدخول" />
+    <button onclick="checkAdmin()" class="circle-btn">دخول</button>
+    <div id="adminPanel" style="display:none;">
+      <p>🧿 رصيد الأدمن 10000 لكل عملة</p>
+      <button onclick="alert('تحكم كامل جاهز')" class="circle-btn">مراقبة التحويلات</button>
+    </div>
+  </div>
+  <script>
+    function checkAdmin() {
+      const code = document.getElementById('adminCode').value;
+      if (code === "12345") {
+        document.getElementById('adminPanel').style.display = "block";
+      } else {
+        alert("رمز خاطئ");
+      }
+    }
+  </script>
+</body>
+</html>
