@@ -1,0 +1,25 @@
+<!-- send.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تحويل</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="centered gradient">
+  <div class="form-container">
+    <h2>تحويل إلى مستخدم</h2>
+    <form id="sendForm">
+      <select id="coin">
+        <option>TRX</option><option>USDT</option><option>USDD</option>
+        <option>BTC</option><option>ETH</option><option>BTT</option><option>NFT</option>
+      </select>
+      <input id="wallet" placeholder="عنوان المحفظة" required>
+      <input id="amount" type="number" placeholder="المبلغ" required>
+      <button type="submit" class="circle-btn">إرسال</button>
+    </form>
+    <p id="sendMsg" class="success-message"></p>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
