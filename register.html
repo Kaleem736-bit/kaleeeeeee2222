@@ -1,0 +1,32 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل جديد</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="centered gradient">
+  <div class="form-container">
+    <h2>تسجيل حساب جديد</h2>
+    <form id="registerForm">
+      <input placeholder="الاسم الرباعي" required>
+      <input placeholder="رقم الهاتف أو الإيميل" required>
+      <input type="password" id="password" placeholder="كلمة المرور" required>
+      <input type="password" id="confirm" placeholder="تأكيد كلمة المرور" required>
+      <button type="submit" class="circle-btn">تسجيل</button>
+    </form>
+    <p id="registerMsg" class="success-message"></p>
+  </div>
+  <script>
+    document.getElementById("registerForm").onsubmit = e => {
+      e.preventDefault();
+      const pass = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+      if (pass !== confirm) return alert("كلمات المرور غير متطابقة");
+      document.getElementById("registerMsg").textContent = "✅ تم التسجيل بنجاح!";
+      setTimeout(() => location.href = "wallet.html", 1500);
+    };
+  </script>
+</body>
+</html>
